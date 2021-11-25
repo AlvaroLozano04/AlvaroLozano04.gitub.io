@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let m = parseInt(prompt("digite el numero de filas"))
+let n = parseInt(prompt("digite el numero de columnas"))
+
+//Asumo que querias contar la cantidad de filas y columnas que hay en total.
+let t = m * n
+const array = new Array(m).fill(new Array(n))
+
+//Otra forma seria usar la propiedad length de los arrays:
+//let t = array.length * array[0].length
+
+//Recorremos las filas
+for(let i = 0; i < array.length; i++){
+  
+  //Recorremos la columna en la fila actual
+  for(let j = 0; j < array[i].length; j++){
+  
+    //Asignamos un valor a la columna de nuestro array:
+    array[i][j] = i + j + 1;
+    
+    //Imprimimos la columna actual.
+    document.write(array[i][j] + " ");
+  }
+  
+  document.write("<br>");
+  
+}
+
+
+console.log(`El tamaño del array es de: ${m} x ${n} = ${m * n}`);
+</script>
+</body>
+</html>
